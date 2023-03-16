@@ -417,6 +417,14 @@
     line-height: 90px;
 }
 
+.feeback a {
+    width: 200px;
+    height: 200px;
+    display: block;
+    text-decoration: none;
+    margin-top: 56px;
+}
+
 .member-data-add-content-member {
     display: none;
 }
@@ -465,12 +473,15 @@
     display: none;
 }
 
+.normal-look {
+    margin: 0 auto;
+}
+
 .member-data-look article {
     width: 80rw;
-    height: 1100px;
     display: flex;
     flex-direction: row-reverse;
-    padding: 10px 350px 0 200px;
+    padding: 10px 427px 0 374px;
 }
 
 .member-data-look-content {
@@ -542,9 +553,11 @@
 
 }
 
+
 .member-data-side-button {
     display: flex;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .member-data-side-button button {
@@ -794,17 +807,18 @@
 }
 
 .login-button:hover {
-    background-color: #b9b7ff;
+    background-color: #faffb7;
     font-weight: bold;
 }
 
 .member-center-top-left a:hover {
-    background-color: #b9b7ff;
-    color: #fff;
+    background-color: #faffb7;
+    color: #000;
 }
 
 .link li:hover {
-    background-color: #b9b7ff;
+    background-color: #faffb7;
+    color: #000;
 }
 
 .link li:hover p {
@@ -812,11 +826,13 @@
 }
 
 .button-notmain-4:hover {
-    background-color: #b9b7ff;
+    background-color: #faffb7;
+    color: #000;
 }
 
 .button-main-4:hover {
-    background-color: #b9b7ff;
+    background-color: #faffb7;
+    color: #000;
 }
 
 .member-order-content button:hover {
