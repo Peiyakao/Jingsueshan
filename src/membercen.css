@@ -382,18 +382,18 @@
 .link li {
     width: 200px;
     height: 200px;
-    background-color: #57B0E2;
     border: 1.5px solid white;
-    border-radius: 20px;
+    border-radius: 100%;
     margin-right: 30px;
     margin-top: 20px;
+    background-color: #e3e3e3;
 
 }
 
 .link li p {
     text-align: center;
     font-size: 3rem;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -402,8 +402,11 @@
     border: 0;
     width: 200px;
     height: 200px;
-
+    background-image: url("../image/membercenter/fishborder1.png");
+    background-size: contain;
 }
+
+    
 
 .link-btn2 p {
     line-height: 90px;
@@ -818,7 +821,11 @@
 
 .link li:hover {
     background-color: #faffb7;
-    color: #000;
+    color: #ff6262;
+}
+.link li button:hover {
+   
+    background-image: url("../image/membercenter/fishborder3.png");
 }
 
 .link li:hover p {
