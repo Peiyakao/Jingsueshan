@@ -62,7 +62,6 @@ body {
     padding: 120px 30px 0 100px;
     background-repeat: no-repeat;
     height: 1341px;
-
 }
 
 .main-page aside ul {
@@ -77,7 +76,7 @@ body {
     width: 51px;
     height: 51px;
 }
-.main-page aside a:hover{
+.main-page aside button:hover{
     background-image: url(../image/seafoodgd/ruleicon_click.png);
 
 }
@@ -106,12 +105,60 @@ body {
 .priciple-1-article h3{
     animation: priciple1 2s forwards;
 }
+.priciple-2-article h3{
+    animation: priciple2 2s forwards;
+}
+.priciple-5-article h3{
+    animation: priciple5 2s forwards;
+}
+.priciple-6-article h3{
+    animation: priciple6 2s forwards;
+}
+.priciple-7-article h3{
+    animation: priciple7 2s forwards;
+}
+.priciple-8-article h3{
+    animation: priciple8 2s forwards;
+}
 @keyframes priciple1{
     0%{transform: scale(1,1);}
     5%{transform: scale(2,2);}
     30%{transform: scale(1,1);}
     100%{transform: scale(1,1);}
 }
+@keyframes priciple2{
+    0%{transform: scale(1,1);}
+    5%{transform: scale(2,2);}
+    30%{transform: scale(1,1);}
+    100%{transform: scale(1,1);}
+}
+
+
+@keyframes priciple5{
+    0%{transform: scale(1,1);}
+    5%{transform: scale(2,2);}
+    30%{transform: scale(1,1);}
+    100%{transform: scale(1,1);}
+}
+@keyframes priciple6{
+    0%{transform: scale(1,1);}
+    5%{transform: scale(2,2);}
+    30%{transform: scale(1,1);}
+    100%{transform: scale(1,1);}
+}
+@keyframes priciple7{
+    0%{transform: scale(1,1);}
+    5%{transform: scale(2,2);}
+    30%{transform: scale(1,1);}
+    100%{transform: scale(1,1);}
+}
+@keyframes priciple8{
+    0%{transform: scale(1,1);}
+    5%{transform: scale(2,2);}
+    30%{transform: scale(1,1);}
+    100%{transform: scale(1,1);}
+}
+
 
 .main-page aside button{
     background-image: url(../image/seafoodgd/ruleicon.png);
@@ -157,7 +204,7 @@ body {
 }
 
 .foot {
-    top: 2353px;
+    top: 2533px;
 }
 .first-page a:hover{
     color: red;
