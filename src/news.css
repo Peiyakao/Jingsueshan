@@ -247,7 +247,7 @@
 }
 
 .main-right-news ul {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     background-color: #fff;
