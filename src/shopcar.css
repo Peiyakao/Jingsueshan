@@ -214,6 +214,10 @@ input {
     text-align: left;
 }
 
+.first-page-main-right-bottom {
+    text-decoration: none;
+}
+
 .first-page-main-right-bottom ol li,
 p {
     font-size: 2rem;
