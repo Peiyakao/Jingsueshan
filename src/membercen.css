@@ -406,7 +406,7 @@
     background-size: contain;
 }
 
-    
+
 
 .link-btn2 p {
     line-height: 90px;
@@ -567,6 +567,10 @@
     height: 150px;
     width: 38px;
     border-radius: 10px;
+}
+
+.member-data-side-button button:hover {
+    font-size: 2.5rem;
 }
 
 .member-data-look-content-password {
@@ -823,8 +827,9 @@
     background-color: #faffb7;
     color: #ff6262;
 }
+
 .link li button:hover {
-   
+
     background-image: url("../image/membercenter/fishborder3.png");
 }
 

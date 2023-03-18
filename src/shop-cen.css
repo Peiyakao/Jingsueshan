@@ -396,6 +396,10 @@ body {
 
 }
 
+.searching-select ul:first-child li:hover {
+    background-color: #fbffb2;
+}
+
 .searching-item li:hover {
     transform: rotate(15deg);
 }

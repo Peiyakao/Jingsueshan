@@ -23,7 +23,7 @@ buynextbtn.addEventListener('click', () => {
     writepage.style.display = 'none';
     paycheck.style.display = 'block';
     paycheckbtn.style.display = 'block';
-    foot.style.top = '1200px';
+    foot.style.top = '1280px';
     // STEP1.style.{ `$background-image` } = 'url("../image/shoppingcargo/arrow1-2-3.png")';
     // STEP2.style.{ `$background-image` } = 'url("../image/shoppingcargo/arrow1-1.png")';
 });

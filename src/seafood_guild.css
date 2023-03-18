@@ -18,12 +18,21 @@ body {
     font-weight: bolder;
     letter-spacing: 10px;
     text-shadow: 10px 10px 20px #ffffff;
-    animation: fpgh1 2s ease-in-out forwards ;
+    animation: fpgh1 2s ease-in-out forwards;
 }
-@keyframes fpgh1{
-    0%{transform: scale(1,1);}
-    30%{transform: scale(1.5,1.5);}
-    100%{transform: scale(1,1);}
+
+@keyframes fpgh1 {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    30% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 .first-page p {
@@ -34,15 +43,23 @@ body {
     letter-spacing: 10px;
     text-shadow: 10px 10px 20px #ffffff;
     opacity: 0;
-    animation: fpga 2s 1s ease-in-out forwards ;
+    animation: fpga 2s 1s ease-in-out forwards;
 }
-@keyframes fpga{
-    0%{transform: scale(2,2);
+
+@keyframes fpga {
+    0% {
+        transform: scale(2, 2);
         opacity: .5;
     }
-    35%{transform: scale(1.5,1.5);}
-    100%{transform: scale(1,1);
-        opacity: 1}
+
+    35% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+        opacity: 1
+    }
 }
 
 .first-page a {
@@ -70,13 +87,15 @@ body {
     flex-direction: column;
     width: 300PX;
 }
-.main-page aside a{
+
+.main-page aside a {
     background-image: url(../image/seafoodgd/ruleicon.png);
     background-repeat: no-repeat;
     width: 51px;
     height: 51px;
 }
-.main-page aside button:hover{
+
+.main-page aside button:hover {
     background-image: url(../image/seafoodgd/ruleicon_click.png);
 
 }
@@ -102,65 +121,142 @@ body {
     overflow: hidden;
 
 }
-.priciple-1-article h3{
+
+.priciple-1-article h3 {
     animation: priciple1 2s forwards;
 }
-.priciple-2-article h3{
+
+.priciple-2-article h3 {
     animation: priciple2 2s forwards;
 }
-.priciple-5-article h3{
+
+.priciple-5-article h3 {
     animation: priciple5 2s forwards;
 }
-.priciple-6-article h3{
+
+.priciple-6-article h3 {
     animation: priciple6 2s forwards;
 }
-.priciple-7-article h3{
+
+.priciple-7-article h3 {
     animation: priciple7 2s forwards;
 }
-.priciple-8-article h3{
+
+.priciple-8-article h3 {
     animation: priciple8 2s forwards;
 }
-@keyframes priciple1{
-    0%{transform: scale(1,1);}
-    5%{transform: scale(2,2);}
-    30%{transform: scale(1,1);}
-    100%{transform: scale(1,1);}
+
+@keyframes priciple1 {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    5% {
+        transform: scale(1.5, 1.5);
+    }
+
+    30% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
-@keyframes priciple2{
-    0%{transform: scale(1,1);}
-    5%{transform: scale(2,2);}
-    30%{transform: scale(1,1);}
-    100%{transform: scale(1,1);}
+
+@keyframes priciple2 {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    5% {
+        transform: scale(1.5, 1.5);
+    }
+
+    30% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 
-@keyframes priciple5{
-    0%{transform: scale(1,1);}
-    5%{transform: scale(2,2);}
-    30%{transform: scale(1,1);}
-    100%{transform: scale(1,1);}
+@keyframes priciple5 {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    5% {
+        transform: scale(1.5, 1.5);
+    }
+
+    30% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
-@keyframes priciple6{
-    0%{transform: scale(1,1);}
-    5%{transform: scale(2,2);}
-    30%{transform: scale(1,1);}
-    100%{transform: scale(1,1);}
+
+@keyframes priciple6 {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    5% {
+        transform: scale(1.5, 1.5);
+    }
+
+    30% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
-@keyframes priciple7{
-    0%{transform: scale(1,1);}
-    5%{transform: scale(2,2);}
-    30%{transform: scale(1,1);}
-    100%{transform: scale(1,1);}
+
+@keyframes priciple7 {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    5% {
+        transform: scale(1.5, 1.5);
+    }
+
+    30% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
-@keyframes priciple8{
-    0%{transform: scale(1,1);}
-    5%{transform: scale(2,2);}
-    30%{transform: scale(1,1);}
-    100%{transform: scale(1,1);}
+
+@keyframes priciple8 {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    5% {
+        transform: scale(1.5, 1.5);
+    }
+
+    30% {
+        transform: scale(1.2, 1.2);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
 
 
-.main-page aside button{
+.main-page aside button {
     background-image: url(../image/seafoodgd/ruleicon.png);
     width: 50px;
     height: 50px;
@@ -168,6 +264,7 @@ body {
     border-radius: 10px;
     background-repeat: no-repeat;
 }
+
 .main-page article ul {
     display: flex;
     flex-direction: row;
@@ -206,6 +303,7 @@ body {
 .foot {
     top: 2533px;
 }
-.first-page a:hover{
+
+.first-page a:hover {
     color: red;
 }
