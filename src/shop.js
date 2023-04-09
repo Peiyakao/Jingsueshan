@@ -47,3 +47,26 @@ showmorebtn6.addEventListener('click', () => {
     showprice6.style.opacity = '1';
     showbuy6.style.opacity = '1';
 });
+
+$(function(){
+    let rotate = 0;
+    $(".ham").on("click", function () {
+        const toTop = document.querySelector(".to-top button");
+        if (!rotate) {
+            $(".ham-2").css("opacity", "0");
+            $(".ham-2").toggle();
+            $(".ham-1").css({ "rotate": "45deg", "background-color": "#29a6ff" });
+            $(".ham-3").css({ "rotate": "-45deg", "background-color": "#29a6ff" });
+            $("nav").slideToggle("slow");
+            rotate = 1;
+        } else {
+            $(".ham-2").toggle();
+            $(".ham-2").css("opacity", "1");
+            $(".ham-1").css({ "rotate": "0deg", "background-color": "#000000" });
+            $(".ham-3").css({ "rotate": "0deg", "background-color": "#000000" });
+            $("nav").slideToggle("slow");
+            rotate = 0;
+        }
+
+    });
+})

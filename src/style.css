@@ -8,27 +8,26 @@ html {
 body {
     font-family: "Noto Sans HK", Helvetica, sans-serifArial, ;
     line-height: 1.2;
-    width: 1901px;
 }
 
 h1 {
-    font-size: 6rem;
-}
-
-h2 {
-    font-size: 5.5rem;
-}
-
-h3 {
-    font-size: 5rem;
-}
-
-h4 {
     font-size: 4rem;
 }
 
-h5 {
+h2 {
     font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 3.5rem;
+}
+
+h5 {
+    font-size: 3rem;
 }
 
 .color-1 {
@@ -77,32 +76,35 @@ h5 {
 }
 
 .button-main-1 {
-    border-radius: 100px;
+    border-radius: 10px;
     width: 384px;
     height: 97px;
-    background-color: #78F8E1;
-    border: 1px solid wheat;
+    color: #FFFFFF;
+    background-color: #00059d;
+    border: .5px solid rgb(255, 254, 253);
     font-size: 4rem;
 
 }
 
 .button-notmain-1 {
-    border-radius: 100px;
+    border-radius: 10px;
     width: 384px;
     height: 97px;
-    background-color: rgba(134, 192, 225, 0.65);
-    border: 2px solid wheat;
+    color: #FFFFFF;
+    background-color: #00059d;
+    border: .5px solid wheat;
     font-size: 4rem;
 
 }
 
 
 .button-main-3 {
-    border-radius: 15px;
+    border-radius: 10px;
     width: 200px;
     height: 75px;
-    background-color: #78F8E1;
-    border: 1.5px solid wheat;
+    color: #FFFFFF;
+    background-color: #00059d;
+    border: .5px solid wheat;
     font-size: 4rem;
     font-weight: 800;
 
@@ -111,90 +113,98 @@ h5 {
 .button-notmain-3 {
     width: 200px;
     height: 75px;
-    background: rgba(134, 192, 225, 0.65);
-    border-radius: 15px;
+    background: #00059d;
+    border-radius: 10px;
+    color: #FFFFFF;
     font-size: 4rem;
-    border: 1.5px solid rgb(240, 238, 238);
+    border: .5px solid rgb(240, 238, 238);
 
 }
 
 .button-main-4 {
-    border-radius: 15px;
+    border-radius: 10px;
     width: 180px;
     height: 80px;
-    background-color: #78F8E1;
-    border: 1.5px solid wheat;
+    color: #FFFFFF;
+    background-color: #00059d;
+    border: .5px solid wheat;
     font-size: 2.5rem;
-    font-weight: 800;
 
 }
 
 .button-notmain-4 {
     width: 180px;
     height: 80px;
-    background: rgba(134, 192, 225, 0.65);
-    border-radius: 15px;
+    background: #00059d;
+    color: #FFFFFF;
+    border-radius: 10px;
     font-size: 2.5rem;
-    border: 1.5px solid rgb(240, 238, 238);
+    border: .5px solid rgb(240, 238, 238);
 
 }
 
 .button-main-6 {
     width: 120px;
     height: 55.11px;
-    background: #78F8E1;
+    background: #00059d;
     font-weight: 800;
-    border-radius: 20px;
+    color: #FFFFFF;
+    border-radius: 10px;
     font-size: 2rem;
-    border: 1.5px solid rgb(240, 238, 238);
+    border: .5px solid rgb(240, 238, 238);
 
 }
 
 .button-notmain-6 {
     width: 120px;
     height: 55.11px;
-    background: rgba(120, 161, 248, 0.71);
+    background: #00059d;
     font-weight: 800;
-    border-radius: 20px;
+    color: #FFFFFF;
+    border-radius: 10px;
     font-size: 2rem;
-    border: 1.5px solid rgb(240, 238, 238);
+    border: .5px solid rgb(240, 238, 238);
 
 }
 
 /*======================================================================*/
 .button-notmain-1:hover {
-    background-color: #f3f9c0;
+    background-color: #8eccff;
+    color: #000;
 
 }
 
 .button-main-1:hover {
-    background-color: #f3f9c0;
+    background-color: #8eccff;
+    color: #000;
 }
 
 .button-notmain-3:hover {
-    background-color: #f3f9c0;
+    background-color: #8eccff;
+    color: #000;
 }
 
 .button-main-3:hover {
-    background-color: #f3f9c0;
+    background-color: #8eccff;
+    color: #000;
 }
 
 .button-notmain-4:hover {
-    background-color: #f3f9c0;
-    font-size: 3rem;
+    background-color: #8eccff;
+    color: #000;
 }
 
 .button-main-4:hover {
-    background-color: #f3f9c0;
-    font-size: 3rem;
+    background-color: #8eccff;
+    color: #000;
 }
 
 .button-notmain-6:hover {
-    background-color: #f3f9c0;
-    font-size: 2.5rem;
+    background-color: #8eccff;
+    color: #000;
 }
 
 .button-main-6:hover {
-    background-color: #f3f9c0;
-    font-size: 2.5rem;
+    background-color: #8eccff;
+    color: #000;
 }
