@@ -58,6 +58,9 @@
         </div>
     </header>
     <div class="wrapper">
+        <div class="to-top">
+            <button></button>
+        </div>
         <section class="top">
             <div class="outter">
                 <h1>歡迎光臨金速鱻魚市場</h1>
@@ -80,7 +83,7 @@
                     <div class="inside-page1">
                         <button class="inside-page1-close"><img src="../image/shoping_cen/close.png"
                                 alt="close"></button>
-                        <h1>海鮮資料百科全書</h1>
+                        <h1>海鮮名錄</h1>
                         <div class="search">
                             <input type="text">
                             <button class="search-btn"><img src="../image/shoping_cen/magni.png" alt="magni"></button>
@@ -95,7 +98,7 @@
                                     <span><input type="checkbox" name="cook-red" id="cook-red" checked><label
                                             for="cook-red">紅燒</label></span>
                                     <span><input type="checkbox" name="cook-yellow" id="cook-yellow" checked><label
-                                            for="cook-yellow">油炸</label></span>
+                                            for="cook-yellow">生吃</label></span>
                                     <span><input type="checkbox" name="cook-white" id="cook-white" checked><label
                                             for="cook-white">蒸</label></span>
                                     <span><input type="checkbox" name="cook-none" id="cook-none" checked><label
@@ -124,7 +127,9 @@
                             <button class="button-main-6 exit">離開</button>
                         </div>
                         <div class="inside-page2-left ">
-                            <h2>北台灣漁港</h2>
+                            <h2>北台灣漁港 <input type="checkbox" id="select-all-n"></input><Label
+                                    for="select-all-n">全選</Label>
+                            </h2>
                             <div class="inside-page2-left-locate">
                                 <ul>
                                     <li class="inside-page2-left-locate-1">
@@ -157,43 +162,43 @@
 
                                 <div class="left-pic1">
                                     <img src="../image/shoping_cen/n1.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>後厝漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="left-pic1-1">
+                                        <label for="left-pic1-1">後厝漁港</label>
                                     </div>
                                 </div>
                                 <div class="left-pic2">
 
                                     <img src="../image/shoping_cen/n2.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>富基漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="left-pic1-2">
+                                        <label for="left-pic1-2">富基漁港</label>
                                     </div>
                                 </div>
                                 <div class="left-pic3">
 
                                     <img src="../image/shoping_cen/n3.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>龜吼漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="left-pic1-3">
+                                        <label for="left-pic1-3">龜吼漁港</label>
                                     </div>
                                 </div>
                                 <div class="left-pic4">
 
                                     <img src="../image/shoping_cen/n4.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>竹圍漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="left-pic1-4">
+                                        <label for="left-pic1-4">竹圍漁港</label>
                                     </div>
                                 </div>
                                 <div class="left-pic5">
 
                                     <img src="../image/shoping_cen/n5.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>永安漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="left-pic1-5">
+                                        <label for="left-pic1-5">永安漁港</label>
                                     </div>
                                 </div>
                                 <div class="left-pic6">
 
-                                    <img src="../image/shoping_cen/n6.png" alt="">
+                                    <img src="../image/shoping_cen/n6.png" alt="" id="left-pic1-6">
                                     <div><input type="checkbox" class="locate-select">
-                                        <p>南寮漁港</p>
+                                        <label for="left-pic1-6">南寮漁港</label>
                                     </div>
                                 </div>
                                 <div class="left-pic7">
@@ -204,7 +209,8 @@
                         </div>
                         <div class="inside-page2-rigth ">
 
-                            <h2>中台灣漁港</h2>
+                            <h2><input type="checkbox" id="select-all-w"></input><Label
+                                    for="select-all-w">全選</Label>中台灣漁港</h2>
 
 
                             <div class="inside-page2-rigth-locate">
@@ -232,28 +238,28 @@
 
                                 <div class="rigth-pic1">
                                     <img src="../image/shoping_cen/m1.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>梧棲觀光漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="rigth-pic1-1">
+                                        <label for="rigth-pic1-1">梧棲觀光漁港</label>
                                     </div>
                                 </div>
                                 <div class="rigth-pic2">
                                     <img src="../image/shoping_cen/m2.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>苑港觀光漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="rigth-pic1-2">
+                                        <label for="rigth-pic1-2">苑港觀光漁港</label>
                                     </div>
 
                                 </div>
                                 <div class="rigth-pic3">
                                     <img src="../image/shoping_cen/m3.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>龍鳳漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="rigth-pic1-3">
+                                        <label for="rigth-pic1-3">龍鳳漁港</label>
                                     </div>
 
                                 </div>
                                 <div class="rigth-pic4">
                                     <img src="../image/shoping_cen/m4.png" alt="">
-                                    <div><input type="checkbox" class="locate-select">
-                                        <p>箔子寮漁港</p>
+                                    <div><input type="checkbox" class="locate-select" id="rigth-pic1-4">
+                                        <label for="rigth-pic1-4">箔子寮漁港</label>
                                     </div>
                                 </div>
                                 <div class="rigth-pic5">
@@ -262,24 +268,25 @@
                             </div>
                         </div>
                         <div class="inside-page3-left ">
-                            <h2>南台灣漁港</h2>
+                            <h2>南台灣漁港<input type="checkbox" id="select-all-s"></input><Label
+                                    for="select-all-s">全選</Label></h2>
                             <div class="inside-page3-left-locate">
 
                                 <ul>
                                     <li class="inside-page3-left-locate-1">
-                                        <p>東石漁港</p>
+                                        <label>東石漁港</label>
                                         <button></button>
                                     </li>
                                     <li class="inside-page3-left-locate-2">
-                                        <p>將軍漁港</p>
+                                        <label>將軍漁港</label>
                                         <button></button>
                                     </li>
                                     <li class="inside-page3-left-locate-3">
-                                        <p>蚵子寮漁港</p>
+                                        <label>蚵子寮漁港</label>
                                         <button></button>
                                     </li>
                                     <li class="inside-page3-left-locate-4">
-                                        <p>東港漁港</p>
+                                        <label>東港漁港</label>
                                         <button></button>
                                     </li>
                                     </li>
@@ -289,29 +296,29 @@
                                 <ul>
                                     <li class="page3-left-pic1">
                                         <img src="../image/shoping_cen/s1.png" alt="">
-                                        <div><input type="checkbox" class="locate-select">
-                                            <p>東石漁港</p>
+                                        <div><input type="checkbox" class="locate-select" id="page3-left-pic1-1">
+                                            <label for="page3-left-pic1-1">東石漁港</label>
                                         </div>
                                     </li>
                                     <li class="page3-left-pic2">
                                         <img src="../image/shoping_cen/s2.png" alt="">
-                                        <div><input type="checkbox" class="locate-select">
-                                            <p>將軍漁港</p>
+                                        <div><input type="checkbox" class="locate-select" id="page3-left-pic1-2">
+                                            <label for="page3-left-pic1-2">將軍漁港</label>
                                         </div>
 
                                     </li>
                                     <li class="page3-left-pic3">
                                         <img src="../image/shoping_cen/s3.png" alt="">
-                                        <div><input type="checkbox" class="locate-select">
-                                            <p>蚵仔寮漁港</p>
+                                        <div><input type="checkbox" class="locate-select" id="page3-left-pic1-3">
+                                            <label for="page3-left-pic1-3">蚵仔寮漁港</label>
                                         </div>
 
                                     </li>
                                     <li class="page3-left-pic4">
                                         <img src="../image/shoping_cen/s4.png" alt="">
 
-                                        <div><input type="checkbox" class="locate-select">
-                                            <p>東港漁港</p>
+                                        <div><input type="checkbox" class="locate-select" id="page3-left-pic1-4">
+                                            <label for="page3-left-pic1-4">東港漁港</label>
                                         </div>
                                     <li class="page3-left-pic5">
                                         <img src="../image/shoping_cen/s.png" alt="">
@@ -322,22 +329,23 @@
                         <div class="inside-page3-rigth ">
                             <div class="inside-page3-rigth-top">
                                 <button></button>
-                                <h2>東台灣漁港 </h2>
+                                <h2><input type="checkbox" id="select-all-E"></input><Label
+                                        for="select-all-E">全選</Label>東台灣漁港 </h2>
                             </div>
 
                             <div class="inside-page3-rigth-locate">
 
                                 <ul>
                                     <li class="inside-page3-rigth-locate-1">
-                                        <p>花蓮漁港</p>
+                                        <label>花蓮漁港</label>
                                         <button></button>
                                     </li>
                                     <li class="inside-page3-rigth-locate-2">
-                                        <p>新港漁港</p>
+                                        <label>新港漁港</label>
                                         <button></button>
                                     </li>
                                     <li class="inside-page3-rigth-locate-3">
-                                        <p>富岡漁港</p>
+                                        <label>富岡漁港</label>
                                         <button></button>
                                     </li>
                                     </li>
@@ -351,21 +359,21 @@
 
                                     <li class="page3-rigth-pic1">
                                         <img src="../image/shoping_cen/w1.png" alt="">
-                                        <div><input type="checkbox" class="locate-select">
-                                            <p>花蓮漁港</p>
+                                        <div><input type="checkbox" class="locate-select" id="page3-rigth-pic1-1">
+                                            <label for="page3-rigth-pic1-1">花蓮漁港</label>
                                         </div>
                                     </li>
                                     <li class="page3-rigth-pic2">
                                         <img src="../image/shoping_cen/w2.png" alt="">
-                                        <div><input type="checkbox" class="locate-select">
-                                            <p>新港漁港</p>
+                                        <div><input type="checkbox" class="locate-select" id="page3-rigth-pic1-2">
+                                            <label for="page3-rigth-pic1-2">新港漁港</label>
                                         </div>
                                     </li>
                                     <li class="page3-rigth-pic3">
 
                                         <img src="../image/shoping_cen/w3.png" alt="">
-                                        <div><input type="checkbox" class="locate-select">
-                                            <p>富岡漁港</p>
+                                        <div><input type="checkbox" class="locate-select" id="page3-rigth-pic1-3">
+                                            <label for="page3-rigth-pic1-3">富岡漁港</label>
                                         </div>
 
                                     </li>
@@ -384,13 +392,16 @@
             </div>
             <div class="cargo">
                 <button class="button-main-6">
-                    <p id="amount">0</p>
+
+                    <a href="https://peiyakao.github.io/Jingsueshan/index/shoppingcar">
+                        <p id="amount">0</p>
+                    </a>
                 </button>
             </div>
             <article>
                 <div class="main">
                     <ul>
-                        <li>
+                        <li class="fish-1">
                             <div>
                                 <img src="../image/shoping_cen/item1.png" alt="">
                                 <button class="add-car">加入購物車</button>
@@ -402,7 +413,7 @@
                             </div>
 
                         </li>
-                        <li>
+                        <li class="fish-2">
                             <div class="main-1">
                                 <img src="../image/shoping_cen/item2.png" alt="">
                                 <button class="add-car">加入購物車</button>
@@ -414,7 +425,7 @@
                             </div>
 
                         </li>
-                        <li>
+                        <li class="fish-3">
                             <div class="main-1">
                                 <img src="../image/shoping_cen/item3.png" alt="">
                                 <button class="add-car">加入購物車</button>
@@ -426,7 +437,7 @@
                             </div>
 
                         </li>
-                        <li>
+                        <li class="fish-4">
                             <div class="main-1">
                                 <img src="../image/shoping_cen/item4.png" alt="">
                                 <button class="add-car">加入購物車</button>
@@ -438,7 +449,7 @@
                             </div>
 
                         </li>
-                        <li>
+                        <li class="fish-5">
                             <div class="main-1">
                                 <img src="../image/shoping_cen/item5.png" alt="">
                                 <button class="add-car">加入購物車</button>
@@ -449,7 +460,7 @@
                             </div>
 
                         </li>
-                        <li>
+                        <li class="fish-6">
                             <div class="main-1">
                                 <img src="../image/shoping_cen/item6.png" alt="">
                                 <button class="add-car">加入購物車</button>
@@ -542,8 +553,10 @@
                                 </li>
 
                             </ul>
-                            <div><button class="back-shopping-list">回商品列表</button>
-                                <button>加入購物車</button>
+                            <div>
+                                <button class="back-shopping-list">回商品列表</button>
+                                <button class="add-into-car">加入購物車</button>
+                                <img class="add-into-car-animate" src="../image/shoping_cen/cargo_fish.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -553,17 +566,21 @@
             </article>
             <div class="bottom">
                 <div>
-                    <p>首頁</p>
+                    <a href="" class="current">
+                        <p>首頁</p>
+                    </a>
                 </div>
                 <ul>
-                    <li><a href="">1</a></li>
+                    <li class="current"><a href="">1</a></li>
                     <li><a href="">2</a></li>
                     <li><a href="">3</a></li>
                     <li><a href="">4</a></li>
                     <li><a href="">5</a></li>
                 </ul>
                 <div>
-                    <p>末頁</p>
+                    <a href="">
+                        <p>末頁</p>
+                    </a>
                 </div>
             </div>
 
@@ -619,7 +636,6 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="../turnjs4/lib/turn.js"></script>
-
     <script src="../src/shoping_cen.js"></script>
 </body>
 

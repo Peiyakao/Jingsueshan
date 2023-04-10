@@ -58,7 +58,9 @@ header {
     width: auto;
     margin-left: 35px;
     flex-grow: 1;
+
 }
+
 
 header h1 a {
     background-image: url("../image/index/logo_black.png");
@@ -77,6 +79,11 @@ header h1 a {
     border-radius: 10px;
     height: 2px;
     width: 122px;
+}
+
+.navigator-li a img {
+    margin-left: 10px;
+    width: 5%;
 }
 
 .navigator div {
@@ -105,12 +112,22 @@ header h1 a {
 .navigator-ol-1 {
     position: absolute;
     top: -250px;
-    width: 200px;
+    width: 220px;
     left: 120px;
     margin-left: 30px;
     transition: 1s;
 }
 
+.action-active {
+    display: flex;
+    flex-direction: column;
+}
+
+
+#action-main-2 {
+    background-color: #ffffff81;
+    border-radius: 20px;
+}
 
 .navigator-ol-2 {
     position: absolute;
@@ -313,8 +330,6 @@ header h1 a {
 }
 
 .about-left img {
-    margin-top: 200px;
-    margin-left: 80px;
     width: 50%;
     float: left;
     border-radius: 10px;
@@ -323,7 +338,7 @@ header h1 a {
 .about-right {
     float: right;
     width: 50%;
-    margin: 120px auto;
+    margin: 100px auto;
     text-align: center;
 }
 
@@ -347,11 +362,11 @@ header h1 a {
     margin-top: 30px;
     margin-left: 212px;
     font-size: 3.5rem;
-    text-align: left;
+    text-align: justify;
+    padding: 20px;
 }
 
 .about-img-left {
-    margin-right: 745px;
     padding-top: 20px;
 }
 
@@ -404,7 +419,7 @@ header h1 a {
 }
 
 .goal-main h5 {
-    width: 95%;
+    width: 88%;
     text-align: center;
     padding-top: 20px;
 }
@@ -424,7 +439,7 @@ header h1 a {
 
 .article-4 {
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 100px;
     width: 78%;
     height: 350px;
     font-size: 2.5rem;
@@ -448,7 +463,7 @@ header h1 a {
     background-repeat: no-repeat;
     width: 500px;
     margin-bottom: 60px;
-    margin: 0 auto;
+    margin: 24px auto;
     text-align: center;
     font-weight: 600;
 }
@@ -462,7 +477,7 @@ header h1 a {
 
 .action-main li {
     display: block;
-    width: 370px;
+    width: 30%;
     margin-left: 50px;
     text-align: center;
     padding-top: 50px;
@@ -475,11 +490,12 @@ header h1 a {
 }
 
 .action-main p {
-    padding-top: 50px;
+    padding-top: 40px;
     text-align: left;
 }
 
 .action-main img {
+    width: 50%;
     margin: 0 auto;
     display: block;
 }
@@ -572,6 +588,7 @@ footer ol li:hover a {
     position: absolute;
     right: 0;
     display: none;
+    z-index: 10;
 }
 
 @media screen and (max-width:1900px) {
@@ -664,18 +681,23 @@ footer ol li:hover a {
     }
 
     .about-left {
-        width: 70%;
+        width: 40%;
+        background-image: url(../image/index/about_team.png);
+        background-size: 173%;
+        background-repeat: no-repeat;
+        background-position: -334px -335px;
     }
 
     .about-left img {
-        margin-top: 144px;
-        margin-left: 36px;
-        width: 70%;
+        width: 100%;
         float: left;
         border-radius: 10px;
     }
 
     .about-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 70%;
         margin: 120px auto;
         flex-grow: 1;
@@ -686,7 +708,7 @@ footer ol li:hover a {
         margin-bottom: 0;
         font-size: 3rem;
         width: 40%;
-        margin-left: 120px;
+        margin-left: 204px;
         font-weight: 600;
         font-size: 3rem;
     }
@@ -705,13 +727,21 @@ footer ol li:hover a {
     }
 
     .about-img-left {
-        margin-right: 558px;
         width: 40px;
+        align-self: start;
+    }
+
+    .about-content {
+        display: flex;
+        flex-direction: column;
+        width: 95%;
     }
 
     .about-img-right {
-        margin-left: 540px;
-        height: 35px;
+        width: 5%;
+        height: 30px;
+        align-self: self-end;
+
     }
 
     .wrapper footer a {
@@ -719,10 +749,6 @@ footer ol li:hover a {
         align-self: self-end;
     }
 
-    .goal {
-        margin-top: 10px;
-        margin-bottom: 60px;
-    }
 
     .goal-top h4 {
         width: 400px;
@@ -786,18 +812,23 @@ footer ol li:hover a {
     .action-main ul {
         margin: 0px auto;
         padding-top: 0px;
-        width: 80%;
+        width: 90%;
         justify-content: center;
     }
 
     .action-main li {
-        margin-left: 0;
+        box-sizing: border-box;
+        width: 25px;
+        margin-left: 10px;
         margin: 0 auto;
     }
 
     .action-main p {
+        width: 80%;
+        margin: 0 auto;
         height: 200px;
         line-height: 1.5;
+        text-align: justify;
     }
 
     .foot-bottom a {

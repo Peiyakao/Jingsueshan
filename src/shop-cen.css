@@ -81,7 +81,7 @@ body {
 
 .inside {
     position: absolute;
-    left: 238px;
+    left: 220px;
     top: 2px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -127,6 +127,14 @@ body {
 .hard button {
     width: 100px;
     height: 47px;
+}
+
+h2 label {
+    font-size: 1rem;
+}
+
+h2 input {
+    width: 10px;
 }
 
 .inside-page2-left {
@@ -216,6 +224,10 @@ body {
 
 }
 
+.search-catergory button:hover {
+    background-image: url("../image/shoping_cen/top-inside-maker_rwd.png");
+}
+
 .search-catergory li {
     margin-bottom: 10px;
     width: 100%;
@@ -289,7 +301,7 @@ body {
     background-image: url("../image/shoping_cen/top-inside-maker.png");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 105px;
+    width: 200px;
     height: 38px;
     font-size: 2rem;
     margin-top: 0;
@@ -654,6 +666,7 @@ body {
 .inside-page3-left-pic ul div {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 5px;
 }
 
 .inside-page3-left-pic {
@@ -845,6 +858,32 @@ body {
     clear: none;
 }
 
+.shopping .bottom p {
+    font-size: 2rem;
+}
+
+.shopping .bottom ul a {
+    font-size: 2rem;
+}
+
+.shopping .bottom a {
+    text-decoration: none;
+}
+
+.shopping .bottom ul a:hover {
+    color: #000;
+}
+
+.shopping .current a {
+    font-weight: 600;
+    color: #0031f5;
+}
+
+.shopping .bottom .current p {
+    font-weight: 600;
+    color: #000000;
+}
+
 .title h2 {
     margin-top: 10px;
     text-align: center;
@@ -862,6 +901,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    border-radius: 50%;
 }
 
 .cargo button {
@@ -873,19 +913,43 @@ body {
     width: 80px;
     height: 80px;
     border: 0;
-    padding-bottom: 40px;
 }
 
 .cargo p {
     color: #ffffff;
     font-weight: 500;
+    text-align: center;
+}
+
+.cargo a {
+    box-sizing: border-box;
+    padding-top: 12px;
+    padding-right: 10px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 0;
+    border-radius: 50%;
 }
 
 .main ul {
     display: flex;
     flex-wrap: wrap;
+    width: 1150px;
+    height: 1100px;
+    overflow: hidden;
     justify-content: center;
     margin-top: 50px;
+    position: relative;
+}
+
+.main ul img {
+    width: 95%;
+    padding-top: 10px;
+}
+
+.main .fish-2 img {
+    width: 75%;
 }
 
 .main button {
@@ -902,16 +966,49 @@ body {
 .main div {
     width: 249px;
     height: 214px;
-    margin-right: 50px;
 }
 
 .main ul li {
+    position: absolute;
     display: flex;
     margin-bottom: 130px;
-    height: 214px;
+    height: 265px;
     text-align: center;
     justify-content: space-between;
     align-items: center;
+    background-color: #00000053;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.fish-1 {
+    top: 30px;
+    left: -200px
+}
+
+.fish-2 {
+    top: 30px;
+    right: -200px
+}
+
+.fish-3 {
+    top: 400px;
+    left: -200px
+}
+
+.fish-4 {
+    top: 400px;
+    right: -200px
+}
+
+.fish-5 {
+    top: 750px;
+    left: -200px
+}
+
+.fish-6 {
+    top: 750px;
+    right: -200px
 }
 
 .main-1 {
@@ -932,12 +1029,12 @@ body {
 }
 
 .main-2 p {
-    text-align: center;
+    text-align: justify;
     display: block;
     width: 85%;
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 14px;
     line-height: 1.5;
     color: black;
 }
@@ -1002,7 +1099,7 @@ p {
     width: 30px;
     height: 30px;
     border: 0;
-    margin-left: 210px;
+    margin-left: 200px;
 }
 
 .add-card-mid h5 button img {
@@ -1075,6 +1172,7 @@ input {
 }
 
 .add-card-bottom div {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1113,6 +1211,14 @@ input {
     margin-right: 15px;
     margin-top: 15px;
     padding-left: 28px;
+}
+
+.add-into-car-animate {
+    position: absolute;
+    transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    left: 276px;
+    top: -15px;
+    opacity: 0;
 }
 
 .light-box {
@@ -1166,4 +1272,32 @@ p {
     background-color: #8eccff;
     color: #000;
     border: 1px solid gainsboro;
+}
+
+.main ul li.active-l {
+    transition: 1s cubic-bezier(.36, -0.25, .63, 1.28);
+    left: 20px;
+    opacity: 1;
+}
+
+.main ul li.active-r {
+    transition: 1s cubic-bezier(.36, -0.25, .63, 1.28);
+    right: 20px;
+    opacity: 1;
+}
+
+.foot-p {
+    color: #ffffff;
+}
+
+.to-top button {
+    width: 70px;
+    height: 70px;
+    background-image: url("../image/index/top_fish.png");
+    background-size: contain;
+    border: 0;
+    background-color: #ffffff00;
+    position: absolute;
+    right: 0;
+    display: none;
 }

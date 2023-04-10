@@ -466,6 +466,10 @@
 
 .link-btn3 a,
 .link-btn4 a {
+    font-size: 2rem;
+    padding-top: 84px;
+    box-sizing: border-box;
+    height: 200px;
     text-decoration: none;
     display: block;
 
@@ -475,6 +479,9 @@
     line-height: 90px;
 }
 
+.member-order-button .active {
+    background-color: #5d8efe;
+}
 
 
 .member-data-add-content-member {

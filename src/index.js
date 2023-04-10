@@ -112,4 +112,100 @@ $(function () {
         }
 
     });
+
+    let moveLen = 0;
+    const mouse_drag = function () {
+        let down = false;
+        let initialPositionX = 0;
+        let endPositionX = 0;
+        for (i = 0; i < document.querySelectorAll(".action-main li").length; i++) {
+            document.querySelectorAll(".action-main li")[i].addEventListener("touchstart", handleMouseDown);
+            document.querySelectorAll(".action-main li")[i].addEventListener("touchend", handleMouseUp);
+            document.querySelectorAll(".action-main li")[i].addEventListener("touchmove", handleMouseMove);
+        }
+
+        function handleMouseDown(e) {
+            down = true;
+            initialPositionX = e.touches[0].clientX;
+        }
+        function handleMouseUp(e) {
+            if (down) {
+                endPositionX = e.changedTouches[0].clientX;
+                moveLen = endPositionX - initialPositionX;
+                down = false;
+                let this_id = ($(this).attr("id"));
+                let style = this.offsetLeft;
+                if (moveLen < 0 && style <= 400) {
+                    if (this.classList.contains("action-active")) {
+                        this.classList.remove("action-active");
+                        this.nextElementSibling.classList.add("action-active");
+                    }
+                    for (let j = 0; j < $(".selector li").length; j++) {
+                        let select = document.querySelectorAll(".selector li")[j];
+                        if (select.classList.contains(this_id)) {
+                            select.firstElementChild.classList.remove("color");
+                            select.nextElementSibling.firstElementChild.classList.add("color");
+                        }
+                    }
+                    this.closest("ul").style.left = `-${style + 300}px`;
+                } else if (moveLen < 0 && style > 400) {
+
+                }
+                else if (moveLen > 0 && style > 37) {
+                    document.querySelector(".action-main ul").style.left = `-${style - 400}px`;
+                    if (this.classList.contains("action-active")) {
+                        this.classList.remove("action-active");
+                        this.previousElementSibling.classList.add("action-active");
+                    }
+                    for (let j = 0; j < $(".selector li").length; j++) {
+                        let select = document.querySelectorAll(".selector li")[j];
+                        if (select.classList.contains(this_id)) {
+                            select.firstElementChild.classList.remove("color");
+                            select.previousElementSibling.firstElementChild.classList.add("color");
+                        }
+                    }
+                };
+            }
+        }
+        function handleMouseMove(e) {
+            if (down) {
+                endPositionX = e.touches[0].clientX;
+            }
+        };
+
+    };
+
+    if (window.innerWidth < 420) {
+        mouse_drag();
+        let about_count = 0;
+        $(".about").on("click", function () {
+            if (!about_count) {
+                $(this).css("height", "735px");
+                about_count++;
+            } else {
+                $(this).css("height", "92px");
+                about_count = 0;
+            }
+        });
+        let goal_count = 0;
+        $(".goal").on("click", function () {
+            if (!goal_count) {
+                $(this).css("height", "735px");
+                goal_count++;
+            } else {
+                $(this).css("height", "108px");
+                goal_count = 0;
+            }
+        });
+        let action_count = 0;
+        $(".action-top").on("click", function () {
+            if (!action_count) {
+                $(".action").css("height", "586px");
+                action_count++;
+            } else {
+                $(".action").css("height", "110px");
+                action_count = 0;
+            }
+        });
+    }
 })

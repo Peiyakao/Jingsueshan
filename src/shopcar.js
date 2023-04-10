@@ -76,107 +76,108 @@ $(function () {
             //open cargo list
             if (this.className === "click-here") {
                 $(".index-page").toggle();
-                $(".page-wrapper").css("opacity","1");
+                $(".page-wrapper").css("opacity", "1");
                 $("#flipbook").toggle();
                 $("#flipbook").turn("page", 1);
-                $("#pay-money").attr('disabled',"true");
+                $("#pay-money").attr('disabled', "true");
             }
             //press next button
             else if (this.className === "btn-next-step") {
                 if ($("#flipbook").turn("page") == 4) {
                     $(".finish").toggle();
-                    $(".page-wrapper").css("opacity",".4");
-                    let count=5;
-                    let timer=setInterval(function(){
+                    $(".page-wrapper").css("opacity", ".4");
+                    let count = 5;
+                    let timer = setInterval(function () {
                         $(".count-time").html(`${count}`);
-                        if(count>0){
+                        if (count > 0) {
                             count--;
-                        }else{
-                            count=5;
+                        } else {
+                            count = 5;
                             clearInterval(timer);
                         }
-                    },1000);
+                    }, 1000);
                     let exp = parseInt($(".experience-num").html()) + parseInt($(".finall-price").html());
                     setTimeout(function () {
                         $(".experience-num").html(exp);
                         let width = $(this).width();
                         switch ($(".level").html()) {
                             case "海豚之子Son of dolfin":
-                                if(width >= 420)
-                                {
-                                var max_exp = 8000;
-                                var add_exp = exp * 100 / max_exp;
-                                var magin_left = parseInt((-616 * (100 - (add_exp)) / 100) + 230);
-                                console.log(magin_left);
-                                if (magin_left >= 245) {
-                                    magin_left = 245;
-                                }
-                                $(".experience-mid-num").css("margin-left", `${magin_left}px`);
-                                $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
-                                setTimeout(function () {
-
-                                    if (exp >= max_exp) {
-                                        let new_exp = exp - max_exp;
-                                        add_exp = new_exp * 100 / 15000;
-                                        magin_left = parseInt((-616 * (100 - (add_exp)) / 100) + 230);
-                                        $(".experience-num").html(new_exp);
-                                        $(".experience-mid-num").css("margin-left", `${magin_left}px`);
-                                        $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
-                                        $(".experience-top img").attr("src", "../image/shoppingcargo/whale.png");
-                                        $(".level").html(`鯨王\n The king of whale`);
+                                if (width >= 420) {
+                                    var max_exp = 8000;
+                                    var add_exp = exp * 100 / max_exp;
+                                    var magin_left = parseInt((-616 * (100 - (add_exp)) / 100) + 230);
+                                    console.log(magin_left);
+                                    if (magin_left >= 245) {
+                                        magin_left = 245;
                                     }
-                                }, 700);}
-                                else if(width < 420){
+                                    $(".experience-mid-num").css("margin-left", `${magin_left}px`);
+                                    $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
+                                    setTimeout(function () {
+
+                                        if (exp >= max_exp) {
+                                            let new_exp = exp - max_exp;
+                                            add_exp = new_exp * 100 / 15000;
+                                            magin_left = parseInt((-616 * (100 - (add_exp)) / 100) + 230);
+                                            $(".experience-num").html(new_exp);
+                                            $(".experience-mid-num").css("margin-left", `${magin_left}px`);
+                                            $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
+                                            $(".experience-top img").attr("src", "../image/shoppingcargo/whale.png");
+                                            $(".level").html(`鯨王\n The king of whale`);
+                                        }
+                                    }, 700);
+                                }
+                                else if (width < 420) {
                                     var max_exp = 8000;
                                     var add_exp = exp * 100 / max_exp;
                                     var magin_left = parseInt((-458 * (100 - (add_exp)) / 100) + 200);
-                                
+
                                     if (magin_left >= 208) {
-                                    magin_left = 208;
+                                        magin_left = 208;
                                     }
                                     $(".experience-mid-num").css("margin-left", `${magin_left}px`);
                                     $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
                                     setTimeout(function () {
                                         if (exp >= max_exp) {
-                                        let new_exp = exp - max_exp;
-                                        add_exp = new_exp * 100 / 15000;
-                                        magin_left = parseInt((-458 * (100 - (add_exp)) / 100) + 200);
-                                        $(".experience-num").html(new_exp);
-                                        $(".experience-mid-num").css("margin-left", `${magin_left}px`);
-                                        $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
-                                        $(".experience-top img").attr("src", "../image/shoppingcargo/whale.png");
-                                        $(".level").html(`鯨王\n The king of whale`);
-                                    }
-                                }, 700);
+                                            let new_exp = exp - max_exp;
+                                            add_exp = new_exp * 100 / 15000;
+                                            magin_left = parseInt((-458 * (100 - (add_exp)) / 100) + 200);
+                                            $(".experience-num").html(new_exp);
+                                            $(".experience-mid-num").css("margin-left", `${magin_left}px`);
+                                            $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
+                                            $(".experience-top img").attr("src", "../image/shoppingcargo/whale.png");
+                                            $(".level").html(`鯨王\n The king of whale`);
+                                        }
+                                    }, 700);
                                 }
-                                
+
                                 break;
                             case `鯨王\n The king of whale`:
-                                if(width >= 420)
-                                {var max_exp = 15000;
-                                var add_exp = exp * 100 / max_exp;
-                                var magin_left = parseInt((-616 * (100 - (add_exp)) / 100) + 240);
-                                console.log(magin_left);
-                                if (magin_left >= 245) {
-                                    magin_left = 245;
-                                }
-                                $(".experience-mid-num").css("margin-left", `${magin_left}px`);
-                                $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
-                                setTimeout(function () {
-
-                                    if (exp >= max_exp) {
-                                        let new_exp = exp - max_exp;
-                                        add_exp = new_exp * 100 / 20000;
-                                        magin_left = parseInt((-616 * (100 - (add_exp)) / 100) + 240);
-                                        $(".experience-num").html(new_exp);
-                                        $(".experience-mid-num").css("margin-left", `${magin_left}px`);
-                                        $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
-                                        $(".experience-top img").attr("src", "../image/shoppingcargo/whale.png");
-                                        $(".level").html(`海洋之母\n The mother of ocean`);
+                                if (width >= 420) {
+                                    var max_exp = 15000;
+                                    var add_exp = exp * 100 / max_exp;
+                                    var magin_left = parseInt((-616 * (100 - (add_exp)) / 100) + 240);
+                                    console.log(magin_left);
+                                    if (magin_left >= 245) {
+                                        magin_left = 245;
                                     }
-                                }, 700);
-                            }
-                            else if(width < 420){var max_exp = 15000;
+                                    $(".experience-mid-num").css("margin-left", `${magin_left}px`);
+                                    $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
+                                    setTimeout(function () {
+
+                                        if (exp >= max_exp) {
+                                            let new_exp = exp - max_exp;
+                                            add_exp = new_exp * 100 / 20000;
+                                            magin_left = parseInt((-616 * (100 - (add_exp)) / 100) + 240);
+                                            $(".experience-num").html(new_exp);
+                                            $(".experience-mid-num").css("margin-left", `${magin_left}px`);
+                                            $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
+                                            $(".experience-top img").attr("src", "../image/shoppingcargo/whale.png");
+                                            $(".level").html(`海洋之母\n The mother of ocean`);
+                                        }
+                                    }, 700);
+                                }
+                                else if (width < 420) {
+                                    var max_exp = 15000;
                                     var add_exp = exp * 100 / max_exp;
                                     var magin_left = parseInt((-458 * (100 - (add_exp)) / 100) + 200);
                                     console.log(magin_left);
@@ -186,7 +187,7 @@ $(function () {
                                     $(".experience-mid-num").css("margin-left", `${magin_left}px`);
                                     $(".experience-mid-bar .experience-bar").css("width", `${add_exp}%`);
                                     setTimeout(function () {
-    
+
                                         if (exp >= max_exp) {
                                             let new_exp = exp - max_exp;
                                             add_exp = new_exp * 100 / 20000;
@@ -197,8 +198,9 @@ $(function () {
                                             $(".experience-top img").attr("src", "../image/shoppingcargo/whale.png");
                                             $(".level").html(`海洋之母\n The mother of ocean`);
                                         }
-                                    }, 700);}
-                                
+                                    }, 700);
+                                }
+
                                 break;
 
 
@@ -259,8 +261,6 @@ $(function () {
             }
             //delete item you don't want buy
             else if (this.className === "del-btn") {
-                console.log(123);
-                console.log($(this).closest(".item"));
                 $(this).closest(".item").remove();
                 let cur_price = parseInt($(".total-price").html());
                 let total = $(this).closest("ol").children(".total").html();
@@ -271,19 +271,19 @@ $(function () {
                 }
 
             }
-            else if(this.closest("li").className === "pay-select-credit"){
+            else if (this.closest("li").className === "pay-select-credit") {
                 $(".credit-card").fadeIn();
                 $("#pay-money").removeAttr('disabled');
-                $.each($(".pay-select button"),function(i,value){
+                $.each($(".pay-select button"), function (i, value) {
                     $(".pay-select button").eq(i).removeClass("outline");
                 })
                 $(this).addClass("outline");
 
-            }else if(this.closest("div").className === "pay-select"){
+            } else if (this.closest("div").className === "pay-select") {
                 $("#pay-money").removeAttr('disabled');
-                $.each($(".pay-select button"),function(i,value){
+                $.each($(".pay-select button"), function (i, value) {
                     $(".pay-select button").eq(i).removeClass("outline");
-                    
+
                 })
                 $(this).addClass("outline");
             }
@@ -329,19 +329,19 @@ $(function () {
     let total = parseInt($(".total-price").html()) + parseInt($(".delivery-price").html()) - parseInt($(".price-none").html());
     $(".finall-price").html(total);
     //pay
-    
-        let select_amount = 0;
 
-        for (i = 0; i < $(".item").length; i++) {
+    let select_amount = 0;
 
-            if ($(".item").eq(i).find(".choose-input").prop("checked")) {
-                select_amount++;
-                console.log($(".item").eq(i).find(".choose-input").val());
-            }
+    for (i = 0; i < $(".item").length; i++) {
+
+        if ($(".item").eq(i).find(".choose-input").prop("checked")) {
+            select_amount++;
+            console.log($(".item").eq(i).find(".choose-input").val());
         }
-        if (select_amount > $(".second-page-main-left ol").length) {
-            for (i = 0; i <= select_amount - $(".second-page-main-left ol").length; i++) {
-                $(".second-page-main-left ol").append(`
+    }
+    if (select_amount > $(".second-page-main-left ol").length) {
+        for (i = 0; i <= select_amount - $(".second-page-main-left ol").length; i++) {
+            $(".second-page-main-left ol").append(`
                 <li class="certain_buy">
                     <ul>
                         <li class="name"></li>
@@ -351,28 +351,28 @@ $(function () {
                         <li class="total">$</li>
                     </ul>
                 </li>`);
-                let name = $(".item").eq(i).find(".name").html();
-                let size = $(".item").eq(i).find(".size").html();
-                let price = $(".item").eq(i).find(".price").html();
-                let amount = $(".item").eq(i).find(".amount input").val();
-                let total = $(".item").eq(i).find(".total").html();
-                $(".second-page-main-left ol ul").eq(i).find(".name").html(`${name}`);
-                $(".second-page-main-left ol ul").eq(i).find(".size").html(`${size}`);
-                $(".second-page-main-left ol ul").eq(i).find(".price").html(`${price}`);
-                $(".second-page-main-left ol ul").eq(i).find(".amount").html(`${amount}`);
-                $(".second-page-main-left ol ul").eq(i).find(".total").html(`${total}`);
-            }
+            let name = $(".item").eq(i).find(".name").html();
+            let size = $(".item").eq(i).find(".size").html();
+            let price = $(".item").eq(i).find(".price").html();
+            let amount = $(".item").eq(i).find(".amount input").val();
+            let total = $(".item").eq(i).find(".total").html();
+            $(".second-page-main-left ol ul").eq(i).find(".name").html(`${name}`);
+            $(".second-page-main-left ol ul").eq(i).find(".size").html(`${size}`);
+            $(".second-page-main-left ol ul").eq(i).find(".price").html(`${price}`);
+            $(".second-page-main-left ol ul").eq(i).find(".amount").html(`${amount}`);
+            $(".second-page-main-left ol ul").eq(i).find(".total").html(`${total}`);
+        }
 
 
-        } else if (select_amount < $(".second-page-main-left ol").length) {
-            for (i = 0; i <= $(".second-page-main-left ol") - select_amount.length; i++) {
-                $(".second-page-main-left ol").eq(i).remove(".certain_buy");
-            }
+    } else if (select_amount < $(".second-page-main-left ol").length) {
+        for (i = 0; i <= $(".second-page-main-left ol") - select_amount.length; i++) {
+            $(".second-page-main-left ol").eq(i).remove(".certain_buy");
+        }
 
-        };
-    
+    };
 
-    
+
+
     let width = $(window).width();
     console.log(width);
     if (width < 420) {
@@ -385,18 +385,18 @@ $(function () {
             elevation: 10,
             gradients: true,
             display: "single",
-            page:4
+            page: 4
         });
-    }else{
-         $("#flipbook").turn({
-        width: 950,
-        height: 650,
-        elevation: 50,
-        gradients: true,
-        page:4
-    });
+    } else {
+        $("#flipbook").turn({
+            width: 950,
+            height: 650,
+            elevation: 50,
+            gradients: true,
+            page: 4
+        });
     };
-    $("#close-car").on("click",function(){
+    $("#close-car").on("click", function () {
         $("#flipbook").toggle();
         $(".index-page").toggle();
     })
@@ -413,17 +413,17 @@ $(function () {
                 display: "single"
             });
 
-        }else{
-        $("#flipbook").turn({
-           width: 950,
-           height: 650,
-           elevation: 50,
-           gradients: true,
-           page:4
-       });
-    };
+        } else {
+            $("#flipbook").turn({
+                width: 950,
+                height: 650,
+                elevation: 50,
+                gradients: true,
+                page: 4
+            });
+        };
 
     });
-    
+
 
 })

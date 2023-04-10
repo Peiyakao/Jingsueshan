@@ -80,6 +80,7 @@
         background-image: url("../image/shoping_cen/seafoodbook_rwd.png");
         background-size: cover;
         width: 80%;
+        height: 496px;
         background-repeat: no-repeat;
     }
 
@@ -136,15 +137,22 @@
 
     .main ul {
         overflow: auto;
+        width: 100%;
         max-height: 700px;
     }
 
+    .bottom {
+        margin-top: 35px;
+    }
+
     .main ul li {
+        position: unset;
         flex-direction: column-reverse;
         height: auto;
         max-height: 300px;
         margin-top: 50px;
         margin-bottom: 70px;
+        opacity: 1;
     }
 
     .cargo {
@@ -255,5 +263,125 @@
 
     .add-card-bottom .back-shopping-list {
         background-color: #5cadf4;
+    }
+
+    .foot-bottom li {
+        color: #ffffff;
+    }
+
+    .search-catergory .cookway {
+        position: unset;
+
+        height: 120px;
+    }
+
+    .search-catergory .area {
+        margin-bottom: 0;
+    }
+
+    .search-catergory {
+        display: flex;
+        justify-content: space-evenly;
+        width: 80%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+
+    .search-catergory li {
+        width: 45%;
+    }
+
+    .area,
+    .season,
+    .hot,
+    .search-catergory .cookway {
+        background-image: none;
+    }
+
+    .search-catergory button {
+        background-image: url(../image/shoping_cen/buble.png);
+        background-size: cover;
+        font-weight: 600;
+        text-align: center;
+        height: 120px;
+        width: 120px;
+    }
+
+    .search-catergory button:hover {
+        background-image: url(../image/shoping_cen/buble.png);
+    }
+
+    .cookway div {
+        position: absolute;
+        flex-direction: column;
+        height: 150px;
+        width: 50px;
+        background-color: #ffffff00;
+        left: 208px;
+        top: 4px;
+    }
+
+    .cookway span {
+        position: relative;
+        display: block;
+        display: none;
+        height: 40px;
+        background-image: url(../image/shoping_cen/buble.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+
+    .cookway span label {
+        padding-top: 2px;
+        display: block;
+        height: 0px;
+        width: 0px;
+        color: #ffffff00;
+        text-align: center;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        opacity: 0;
+
+    }
+
+    .cookway span input {
+        width: 40px;
+    }
+
+    .cookway span:first-child label {
+        background-image: url(../image/shoping_cen/cook1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .cookway span:nth-child(2) label {
+        background-image: url(../image/shoping_cen/cook2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+
+    }
+
+    .cookway span:nth-child(3) label {
+        background-image: url(../image/shoping_cen/cook3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+    }
+
+    .cookway span:nth-child(4) label {
+        background-image: url(../image/shoping_cen/cook4.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+
+    }
+
+    .cookway span input {
+        display: none;
     }
 }
