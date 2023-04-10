@@ -23,6 +23,12 @@
 
     }
 
+    .link-btn3 a,
+    .link-btn4 a {
+        padding-top: 23px;
+        font-weight: 600;
+    }
+
     #add,
     #login {
         margin-top: 20px;
