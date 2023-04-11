@@ -32,7 +32,7 @@ body {
     }
 
     30% {
-        transform: scale(1.5, 1.5);
+        transform: scale(1.2, 1.2);
     }
 
     100% {
@@ -53,16 +53,13 @@ body {
 
 @keyframes fpga {
     0% {
-        transform: scale(2, 2);
+
         opacity: .5;
     }
 
-    35% {
-        transform: scale(1.5, 1.5);
-    }
 
     100% {
-        transform: scale(1, 1);
+
         opacity: 1;
     }
 }
@@ -462,7 +459,7 @@ body {
         padding-left: 14px;
 
         margin: 0 auto;
-        margin-left: 290px;
+        margin-left: 282px;
         color: black;
         font-size: 1.7rem;
     }
@@ -590,24 +587,29 @@ body {
     .main-page article li {
         width: 383px;
         height: 500px;
-        margin-right: 509px;
+        margin-right: 493px;
         overflow-y: auto;
         overflow-x: hidden;
 
     }
 
     .main-page article li h4 {
-        width: 92%;
+        width: 77%;
+        font-size: 2.5rem;
     }
 
     .main-page article li h3 {
-        width: 96%;
+        font-size: 2.5rem;
+        width: 77%;
         margin-bottom: 33px;
         text-align: left;
     }
 
     .main-page article li p {
-        width: 340px;
+        display: block;
+        width: 77%;
+        font-size: 2rem;
+
         text-align: justify;
     }
 
