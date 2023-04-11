@@ -489,7 +489,7 @@ body {
     .main-page aside ul {
         background-image: none;
         width: 100%;
-        height: 120px;
+        height: 136px;
         flex-direction: row;
         margin-left: 0;
         overflow-x: auto;
@@ -584,11 +584,11 @@ body {
     }
 
     .main-page article ul {
-        margin-left: 0;
+        margin-left: -19px;
     }
 
     .main-page article li {
-        width: 370px;
+        width: 383px;
         height: 500px;
         margin-right: 509px;
         overflow-y: auto;

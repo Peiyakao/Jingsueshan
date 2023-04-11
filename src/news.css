@@ -36,7 +36,13 @@ li p {
     position: relative;
     width: 100%;
     overflow: hidden;
-    height: 342px;
+    height: 433px;
+}
+
+.main-left-img {
+
+    width: 100%;
+    height: 426px;
 }
 
 .main-top h1,
