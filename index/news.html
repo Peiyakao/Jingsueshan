@@ -110,6 +110,7 @@
                     </ul>
                 </div>
             </article>
+
         </section>
         <section class="main-mid">
             <div class="ship_mov">
@@ -189,6 +190,7 @@
                 </ul>
             </div>
             <div class="select-list">
+                <button class="last">last</button>
                 <ul>
                     <li class="click"><a class="color" href="#"><span></span></a></li>
                     <li class="click"><a href="#"><span></span></a></li>
@@ -196,6 +198,7 @@
                     <li class="click"><a href="#"><span></span></a></li>
                     <li class="click"><a href="#"><span></span></a></li>
                 </ul>
+                <button class="next">next</button>
             </div>
         </section>
         <section class="main-bottom">
@@ -482,6 +485,7 @@
 
                 e.preventDefault();
                 document.querySelector(".main-news ul").style.left = `-${i * select_list_width / select_list_a.length}px`;
+                console.log(document.querySelector(".main-news ul").style.left);
                 for (let j = 0; j < select_list_a.length; j++) {
                     select_list_a[j].classList.remove("color");
                 }
@@ -489,8 +493,45 @@
             });
         }
         let main_right_movie_a = document.querySelectorAll(".main-right-movie ul a");
-        console.log(main_right_movie_a[0]);
+        let x = document.querySelector(".main-news ul").style.left;
+        document.querySelector(".next").addEventListener("click", function (e) {
 
+            if (x < -1330) {
+                document.querySelector(".main-news ul").style.left = `${0}px`;
+                x = document.querySelector(".main-news ul").style.left;
+                select_list_a[4].classList.remove("color");
+                select_list_a[0].classList.add("color");
+
+                this.classList.add("color");
+            } else {
+                for (let j = 0; j < select_list_a.length; j++) {
+
+                    if (select_list_a[j].classList.contains("color")) {
+                        select_list_a[j].classList.remove("color");
+                        select_list_a[j].parentElement.nextElementSibling.children[0].classList.add("color");
+                        break;
+                    };
+                }
+                document.querySelector(".main-news ul").style.left = `${x - 443}px`;
+                x = x - 443;
+            }
+        });
+        document.querySelector(".last").addEventListener("click", function (e) {
+            if (x < 0) {
+                document.querySelector(".main-news ul").style.left = `${x + 443}px`;
+                x = x + 443;
+                for (let j = 0; j < select_list_a.length; j++) {
+
+                    if (select_list_a[j].classList.contains("color")) {
+                        select_list_a[j].classList.remove("color");
+                        select_list_a[j].parentElement.previousElementSibling.children[0].classList.add("color");
+                        break;
+                    };
+                }
+            } else if (x >= 0) {
+                x = 0;
+            }
+        });
 
 
 

@@ -61,6 +61,7 @@
 
     .member-center-top-left h2 {
         font-weight: 700;
+        margin-right: 10px;
     }
 
     .member-level h5 {
@@ -83,6 +84,11 @@
 
     }
 
+    .member-table-list li {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
     .member-card {
         display: none;
     }
@@ -97,6 +103,15 @@
 
     .link {
         margin: 0 auto;
+    }
+
+    .member-table-list p {
+        width: 100%;
+        text-align: left;
+    }
+
+    .member-table-list {
+        width: 90%;
     }
 
     .link ul li {
@@ -147,6 +162,14 @@
 
     .table-list li {
         flex-direction: column;
+    }
+
+    .member-data-look-content-password .member-table-list li p {
+        width: 100%;
+    }
+
+    .first-page-bottom img {
+        display: none;
     }
 
     .table-list p {
@@ -237,6 +260,14 @@
         width: 100%;
     }
 
+    .member-table-list input {
+        width: 100%;
+    }
+
+    .member-data-add-content-member .member-table-list select {
+        width: 50%;
+    }
+
     .member-data-look-content-password .table-list li p,
     input {
         width: 100%;
@@ -244,7 +275,7 @@
 
     .password-btn {
         flex-direction: column;
-        margin-top: 50px;
+        margin-top: 20px;
     }
 
     .password-btn .button-notmain-6 {
@@ -252,7 +283,8 @@
         margin-left: 0px;
         height: 55px;
         border-radius: 10px;
-        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-top: 10px;
     }
 
     .password-fix-btn {

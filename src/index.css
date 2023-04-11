@@ -368,11 +368,15 @@ header h1 a {
 
 .about-img-left {
     padding-top: 20px;
+    opacity: 0;
+    transition: 1s;
 }
 
 .about-img-right {
     margin-left: 745px;
     height: 46px;
+    opacity: 0;
+    transition: 1s;
 }
 
 .about footer img {
@@ -381,12 +385,21 @@ header h1 a {
     float: left;
 }
 
+.about-img-right.active {
+    opacity: 1;
+}
+
+.about-img-left.active {
+    opacity: 1;
+}
+
 
 
 .goal {
     background-image: url("../image/index/third_page_background.png");
     max-width: 1960px;
     width: 100%;
+    height: 810.33px;
     padding: 10 350px 0 350px;
     display: flex;
     flex-direction: column;
@@ -415,11 +428,18 @@ header h1 a {
 
 .goal-main li {
     font-weight: 800;
+    opacity: 0;
+    transition: 1s;
+
+}
+
+.goal-main li.active {
+    opacity: 1;
 
 }
 
 .goal-main h5 {
-    width: 88%;
+    width: 82%;
     text-align: center;
     padding-top: 20px;
 }
@@ -443,6 +463,14 @@ header h1 a {
     width: 78%;
     height: 350px;
     font-size: 2.5rem;
+    line-height: 0;
+    opacity: 0;
+    transition: 1s;
+}
+
+.goal-main article .active {
+    opacity: 1;
+    line-height: 2;
 }
 
 .action {
@@ -470,6 +498,7 @@ header h1 a {
 
 .action-main ul {
     display: flex;
+    height: 545.5px;
     flex-direction: row;
     padding-top: 50px;
     justify-content: center;
@@ -482,22 +511,33 @@ header h1 a {
     text-align: center;
     padding-top: 50px;
     flex-grow: 1;
+    opacity: 0;
+    transition: 1s;
+}
+
+.action-main li.active {
+    opacity: 1;
 }
 
 .action-main h4 {
+    font-size: 0;
     color: #000;
     padding-top: 30px;
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .action-main p {
+    width: 0;
     padding-top: 40px;
     text-align: left;
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .action-main img {
-    width: 50%;
+    width: 0%;
     margin: 0 auto;
     display: block;
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .action footer img {
@@ -517,6 +557,14 @@ header h1 a {
 
 }
 
+.about-content article {
+    opacity: 0;
+    transition: 1s;
+}
+
+.about-content article.active {
+    opacity: 1;
+}
 
 
 .navigator_foot {
@@ -676,6 +724,7 @@ footer ol li:hover a {
 
     .about {
         display: flex;
+        height: 648.16px;
         justify-content: space-between;
 
     }
@@ -721,9 +770,10 @@ footer ol li:hover a {
         margin-top: 20px;
         font-size: 2rem;
         text-align: left;
-        line-height: 1.5;
+        line-height: 0;
         margin-left: 0;
         width: 90%;
+        transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
 
     .about-img-left {
@@ -734,7 +784,7 @@ footer ol li:hover a {
     .about-content {
         display: flex;
         flex-direction: column;
-        width: 95%;
+        width: 89%;
     }
 
     .about-img-right {
@@ -756,10 +806,11 @@ footer ol li:hover a {
     }
 
     .goal-main ul {
-        width: 80%;
+        width: 60%;
         margin: 50px auto 0;
         justify-content: center;
         align-items: start;
+        transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .goal-main li {

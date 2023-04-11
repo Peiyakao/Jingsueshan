@@ -1168,7 +1168,7 @@ input {
 
 .add-card-bottom {
     display: flex;
-
+    justify-content: center;
 }
 
 .add-card-bottom div {

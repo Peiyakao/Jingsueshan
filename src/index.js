@@ -6,10 +6,6 @@ const animation_star = document.querySelector(".animation-star ul");
 const fisrt_bg = document.querySelector(".fisrt_page");
 let accuT = 0;
 let accuL = 300;
-console.log(animation_star.querySelectorAll("li")[0].style.top);
-
-
-
 let starmove = setInterval(() => {
     accuT += 2;
     accuL += 30;
@@ -207,5 +203,43 @@ $(function () {
                 action_count = 0;
             }
         });
+    }
+    if (window.innerWidth > 800) {
+        window.addEventListener("scroll",
+            function () {
+                let shopping_list_y = parseInt(document.querySelector(".about").getBoundingClientRect().top);
+                if (shopping_list_y < 200) {
+
+                    document.querySelectorAll(".about-content article")[0].classList.add("active");
+                    document.querySelectorAll(".about-content img")[0].classList.add("active");
+                    document.querySelectorAll(".about-content img")[1].classList.add("active");
+                    document.querySelector(".about-right p").style.lineHeight = "2";
+                }
+                if (shopping_list_y < 160) {
+                    document.querySelectorAll(".about-content article")[1].classList.add("active");
+                }
+                if (shopping_list_y < -400) {
+                    document.querySelector(".goal-main ul").style.width = "80%";
+                    document.querySelectorAll(".goal-main li")[0].classList.add("active");
+                    document.querySelectorAll(".goal-main li")[1].classList.add("active");
+                    document.querySelectorAll(".goal-main li")[2].classList.add("active");
+                    document.querySelectorAll(".goal-main li")[3].classList.add("active");
+                }
+                if (shopping_list_y < -600) {
+                    document.querySelector(".article-4").classList.add("active");
+
+                }
+                if (shopping_list_y < -1100) {
+                    for (let i = 0; i < 3; i++) {
+                        document.querySelectorAll(".action-main li")[i].classList.add("active");
+                        document.querySelectorAll(".action-main img")[i].style.width = "35%";
+                        document.querySelectorAll(".action-main h4")[i].style.fontSize = "3rem";
+                        document.querySelectorAll(".action-main p")[i].style.width = "80%";
+                    }
+
+
+                }
+
+            });
     }
 })

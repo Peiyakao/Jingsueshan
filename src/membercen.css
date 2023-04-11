@@ -18,6 +18,7 @@
     height: 704px;
     background-repeat: no-repeat;
     position: relative;
+    box-sizing: border-box;
 }
 
 .first-page-top {
@@ -40,7 +41,7 @@
 }
 
 .login-button {
-    margin-top: 20px;
+    margin-top: 57px;
     text-align: center;
 }
 
@@ -108,6 +109,7 @@
 
 .login-forgot .table-list p {
     color: #000;
+    margin-right: 2px;
 }
 
 .add-member {
@@ -120,15 +122,17 @@
 }
 
 .login-forgot {
-
+    box-sizing: border-box;
+    padding: 12px;
     display: none;
 }
 
 .login-forgot h5,
 .add-member h5 {
-    text-align: center;
+    text-align: start;
     margin-top: 10px;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 600;
 
 }
 
@@ -137,6 +141,12 @@
     font-weight: 600;
     margin: 10px auto 0;
     text-align: center;
+}
+
+.login-forgot-button {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
 }
 
 .login-forgot-button button {
@@ -227,12 +237,17 @@
 }
 
 .first-page-bottom {
-    width: 80%;
-    margin: 0 auto;
+    box-sizing: border-box;
+    width: 17%;
     position: absolute;
-    left: 217px;
-    top: 680px;
+    right: 50px;
+    top: 400px;
+}
 
+.first-page-bottom img {
+    display: block;
+    box-sizing: border-box;
+    width: 200px;
 }
 
 .first-page-bottom ul {
@@ -300,10 +315,33 @@
     margin-top: 25px;
 }
 
+.member-order-list ul::-webkit-scrollbar {
+    display: none;
+}
+
+.member-order-content {
+    background-color: #ffffff75;
+    height: 280px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.member-order-content div::-webkit-scrollbar {
+    background-color: #c3f9ff;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.member-order-content div::-webkit-scrollbar-thumb {
+    background-color: #97b3ff;
+    border-radius: 10px;
+}
+
 .member-center-top-left a {
     display: block;
     width: 20%;
-    line-height: 2;
+    line-height: 2.5;
     text-decoration: none;
     font-size: 2.5rem;
     background-color: #00059d;
@@ -488,7 +526,7 @@
     display: none;
 }
 
-.member-data-add-content-member .table-list {
+.member-data-add-content-member .member-table-list {
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -496,7 +534,7 @@
 }
 
 
-.member-data-add-content-member .table-list select {
+.member-data-add-content-member .member-table-list select {
     width: 12%;
     height: 40px;
     background-color: #ffffff8a;
@@ -537,7 +575,7 @@
 
 .member-data-look-content {
     width: 60%;
-    background-color: #1255a1;
+    background-color: #5884b6c2;
     border: 1px solid white;
     border-radius: 10px;
     margin: 30px auto;
@@ -545,7 +583,7 @@
 
 #normal-data {
     margin: 0;
-    height: 486px;
+    height: 498px;
 }
 
 .normal-look {
@@ -588,29 +626,63 @@
 }
 
 .table-list {
-    width: 80%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     margin: 45px auto 0;
 
 }
 
+.member-table-list {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 32px auto 0;
+}
+
+.member-table-list p {
+    font-size: 2rem;
+    width: 20%;
+    color: white;
+    text-align: right;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#input-back-btn,
+#sub-password {
+    font-size: 1.8rem;
+    margin-right: -78px;
+    border-radius: 8px;
+    height: 47px;
+}
+
 .table-list li {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    align-items: center;
 }
 
 .table-list input {
     width: 80%;
-    height: 40px;
-    background-color: #ffffff8a;
-    border-radius: 10px;
+    height: 44px;
+    background-color: #ffffff;
+    border-radius: 5px;
     font-size: 2rem;
-    border: #ffffff00;
+    border: 1px solid black;
 }
 
-.member-data-add-content-member.table-list input {
+.member-table-list input {
+    width: 80%;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 2rem;
+    border: 0;
+}
+
+.member-data-add-content-member.member-table-list input {
     width: 60%;
     height: 40px;
     background-color: #ffffff8a;
@@ -619,16 +691,27 @@
     border: #ffffff00;
 }
 
+#next-page,
+#edit {
+    height: 43px;
+}
 
-.member-data-look-content-password .table-list {
+.member-table-list li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
     align-items: center;
 }
 
-.member-data-look-content-password .table-list li {
+.member-data-look-content-password .member-table-list {
+    align-items: center;
+}
+
+.member-data-look-content-password .member-table-list li {
     width: 80%;
 }
 
-.member-data-look-content-password .table-list li p {
+.member-data-look-content-password .member-table-list li p {
     width: 20%;
 }
 
@@ -642,7 +725,12 @@
 .member-data-side-button button {
     height: 150px;
     width: 38px;
-    border-radius: 2px;
+    border-radius: 5px;
+    background: #a6a6a8d6;
+}
+
+.member-data-side-button .active {
+    background-color: #000;
 }
 
 .member-data-side-button button:hover {
@@ -755,7 +843,7 @@
 
 .member-order-content div ul {
     display: flex;
-    width: 100%;
+    width: 89%;
     margin: 0;
     flex-direction: column;
     background-color: #fff;

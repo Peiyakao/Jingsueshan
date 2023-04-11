@@ -172,10 +172,29 @@ $(function () {
                         $(".size-l").html(">700g");
                         break;
                 }
+                let point=parseInt($(".point").html());
+                for(let i=0;i<5;i++){
+                    let star_amount=document.querySelectorAll(".add-card-top ul li")[i].dataset.id;
+                    
+                    if(point-star_amount>=0){
+                        document.querySelectorAll(".add-card-top ul li img")[i].setAttribute("src","../image/shoping_cen/Star1.png");
+                        
+                        
+                    }else{
+                        document.querySelectorAll(".add-card-top ul li img")[i].setAttribute("src","../image/shoping_cen/Star2.png");
+                       
+                    }
+                }
             }
             else if (this.className === "add-card-mid-btn" || this.className === "back-shopping-list") {
                 $(".light-box").toggle();
                 $(".add-into-car-animate").css({ "left": `${276}px`, "top": `${-15}px` });
+                $(".cal-price .total-price").html("0");
+                $(".card-mid-select input").val("0");
+                for(let i=0;i<3;i++){
+                    document.querySelectorAll(".card-mid-select select option")[i].selected="false";
+                }
+                document.querySelectorAll(".card-mid-select select option")[0].selected="true";
                 open = 0;
 
             }
@@ -220,6 +239,14 @@ $(function () {
                 let distance_x = fish_x - cargo_x;
                 let distance_y = fish_y - cargo_y;
                 let count = 0;
+                
+                $(".cal-price .total-price").html("0");
+                $(".card-mid-select input").val("0");
+                for(let i=0;i<3;i++){
+                    document.querySelectorAll(".card-mid-select select option")[i].selected="false";
+                }
+                document.querySelectorAll(".card-mid-select select option")[0].selected="true";
+                console.log($(".cal-price .total-price").html());
                 let current_car_item_amount = $("#amount").html();
 
                 if (check_buy > 0) {
@@ -227,7 +254,6 @@ $(function () {
                     const smaller = setInterval(function () {
                         if (count < 4) {
                             count++;
-                            console.log(count);
                             $(".add-into-car-animate").css({ "transform": `scale(${1 - count * 0.2})`, "opacity": `${1 - count * 0.3}` });
                         } else {
                             count = 0;

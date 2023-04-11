@@ -48,7 +48,16 @@ side_btn_back.addEventListener("click", function () {
     memberdatacotn.style.display = 'block';
     memberdataout.style.display = 'block';
     memberdatapsw.style.display = 'none';
+    document.getElementById("normal-data").style.height = "498px";
+    for (let i = 0; i < 2; i++) {
+        document.querySelectorAll(".member-data-side-button button")[i].classList.remove("active");
+    }
+    document.querySelectorAll(".member-data-side-button button")[0].classList.add("active");
 
+
+})
+submission.addEventListener("click", function () {
+    window.alert("請至註冊信箱收取臨時密碼")
 })
 side_btn.addEventListener("click", function () {
     fixpsw.style.display = 'none';
@@ -106,13 +115,22 @@ for (i = 0; i < all_btn.length; i++) {
                 edit_data.previousElementSibling.innerHTML = `<label for="">回上一頁</label>`;
             }
         } else if (this.parentElement.className === "member-data-side-button") {
-            if (this.className === "button-main-4") {
+            for (let i = 0; i < 2; i++) {
+                document.querySelectorAll(".member-data-side-button button")[i].classList.remove("active");
+            }
+            this.classList.add("active")
+            if (this.className === "button-main-4 active") {
+                console.log(123);
                 memberdatapsw.style.display = "none";
                 memberdatacotn.style.display = "block";
+                document.getElementById("normal-data").style.height = "498px";
             } else {
                 memberdatapsw.style.display = "block";
                 memberdatacotn.style.display = "none";
+                document.getElementById("normal-data").style.height = "370px";
             }
+
+
         } else if (this.className === "watch-paw") {
             console.log("test");
             if (!amount) {
@@ -149,7 +167,7 @@ for (i = 0; i < showdetail.length; i++) {
     showdetail[i].addEventListener("click", function () {
         let showId = this.id;
         let blocks = document.querySelector(`[data-id="${showId}"]`);
-        console.log(blocks.style.scrollHeight);
+
         if (blocks.classList.contains("-on")) {
             blocks.style.maxHeight = "0px";
             blocks.style.overflow = "hidden";
